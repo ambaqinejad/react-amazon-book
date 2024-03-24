@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 
 function App() {
   return <BookList />;
@@ -16,22 +16,16 @@ const BookList = () => {
 };
 
 const Book = () => {
+  const title = "The Women: A Novel";
   return (
-    <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+    <article className="book">
+      <img src="./images/book-img.jpg" alt="The Women: A Novel" />
+      
+      <h2>{title}</h2>
+      <p style={{ color: "#617d98", fontSize: "0.75rem" }}>
+        by Kristin Hannah (Author)
+      </p>
     </article>
   );
 };
-
-const Image = () => (
-  <img
-    src="./images/book-img.jpg"
-    alt="The Women: A Novel"
-  />
-);
-const Title = () => <h2>The Women: A Novel</h2>;
-const Author = () => <p style={{color: "#617d98", fontSize: "0.75rem"}}>by Kristin Hannah (Author)</p>;
-
 export default App;
